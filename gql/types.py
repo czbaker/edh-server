@@ -1,9 +1,13 @@
 import strawberry
 
 # Import Types
-from .hello import HelloQuery
+from .user import UserMutation, UserQuery
 
 # Define Root Types
 @strawberry.type
-class RootQuery(HelloQuery):
+class RootQuery(UserQuery):
+    pass
+
+@strawberry.type
+class RootMutation(UserMutation):
     pass
